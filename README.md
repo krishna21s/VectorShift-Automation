@@ -67,7 +67,7 @@ Frontend will run at: **http://localhost:3000**
 ```bash
 cd backend
 pip install -r requirements.txt
-python main.py
+uvicorn main:app --reload
 ```
 Backend API will run at: **http://localhost:8000**
 
