@@ -32,6 +32,7 @@
 A professional-grade, drag-and-drop pipeline builder for creating AI workflows. Built with React and FastAPI, featuring a modular node system, dynamic theming, and advanced text parsing capabilities.
 
 **Assessment Requirements:**
+
 - ✅ Node Abstraction System
 - ✅ Professional UI/UX Styling
 - ✅ Dynamic Text Node with Variable Detection
@@ -42,6 +43,7 @@ A professional-grade, drag-and-drop pipeline builder for creating AI workflows. 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - **Node.js** v14 or higher
 - **Python** 3.8 or higher
 - **npm** or yarn package manager
@@ -50,25 +52,30 @@ A professional-grade, drag-and-drop pipeline builder for creating AI workflows. 
 ### Installation Steps
 
 #### 1. Clone the Repository
+
 ```bash
 git clone <repository-url>
 cd VectorShift_frontend
 ```
 
 #### 2. Setup Frontend
+
 ```bash
 cd frontend
 npm install
 npm start
 ```
+
 Frontend will run at: **http://localhost:3000**
 
 #### 3. Setup Backend (in a new terminal)
+
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
+
 Backend API will run at: **http://localhost:8000**
 
 ### Quick Usage Guide
@@ -82,6 +89,7 @@ Backend API will run at: **http://localhost:8000**
 7. **Submit Pipeline**: Click Submit button at bottom to validate your pipeline
 
 ### What You'll See
+
 - **6 Beautiful Themes** - Switch between Dark Abyss, Pure White, Ocean Mist, Neon Pulse, Wireframe, and Default
 - **13 Node Types** - Input, Output, LLM, Text, API, Transform, Conditional, Loop, Merge, Filter, Delay, Logger, Variable
 - **Drag & Drop Interface** - Intuitive node-based workflow builder
@@ -138,6 +146,7 @@ Backend API will run at: **http://localhost:8000**
 ### Core Architecture Principles
 
 #### 1. **Node Abstraction System**
+
 ```javascript
 // Factory Pattern for Node Creation
 BaseNode → NodeFactory → Specific Node Types
@@ -150,6 +159,7 @@ Benefits:
 ```
 
 #### 2. **Modular Component Structure**
+
 ```
 src/
 ├── components/          # Reusable UI components
@@ -180,17 +190,18 @@ src/
 ```
 
 #### 3. **State Management Strategy**
+
 ```javascript
 Zustand Store Structure:
 {
   // Core pipeline state
   nodes: [],
   edges: [],
-  
+
   // UI state
   theme: 'vectorshift',
   selectedNode: null,
-  
+
   // Actions
   addNode(), updateNode(), deleteNode(),
   addEdge(), updateEdge(), deleteEdge(),
@@ -199,6 +210,7 @@ Zustand Store Structure:
 ```
 
 #### 4. **Theming System Architecture**
+
 ```javascript
 Theme Object Structure:
 {
@@ -224,6 +236,7 @@ Theme Object Structure:
 ## 🛠️ Technical Stack
 
 ### Frontend
+
 - **React 18.2** - UI framework
 - **ReactFlow 11.8** - Node-based graph library
 - **Zustand** - Lightweight state management
@@ -231,6 +244,7 @@ Theme Object Structure:
 - **Styled Components** - CSS-in-JS styling
 
 ### Backend
+
 - **FastAPI** - Python web framework
 - **NetworkX** - Graph algorithms (DAG detection)
 - **Uvicorn** - ASGI server
@@ -240,6 +254,7 @@ Theme Object Structure:
 ## 📊 Implementation Progress
 
 ### Phase 1: Foundation & Architecture ✅
+
 - [x] README & Planning Documentation
 - [x] Project structure setup
 - [x] Base node abstraction system
@@ -249,6 +264,7 @@ Theme Object Structure:
 - [x] Services layer (API integration)
 
 ### Phase 2: Node System (Assessment Part 1) ✅
+
 - [x] Create BaseNode component
 - [x] Implement node factory pattern
 - [x] Create node configuration system
@@ -263,6 +279,7 @@ Theme Object Structure:
 - [x] **BONUS:** 4 additional nodes (Filter, Delay, Logger, Variable)
 
 ### Phase 3: UI/UX & Styling (Assessment Part 2) ✅
+
 - [x] Design system implementation
 - [x] VectorShift default theme
 - [x] Node styling (gradients, shadows, borders)
@@ -275,6 +292,7 @@ Theme Object Structure:
 - [x] **BONUS:** Theme switcher with 5 themes
 
 ### Phase 4: Text Node Logic (Assessment Part 3) ✅
+
 - [x] Dynamic node resizing
   - [x] Calculate text dimensions
   - [x] Adjust width/height automatically
@@ -290,6 +308,7 @@ Theme Object Structure:
   - [x] Handle labels for clarity
 
 ### Phase 5: Backend Integration (Assessment Part 4) ✅
+
 - [x] Frontend API service
   - [x] Pipeline serialization
   - [x] HTTP client setup
@@ -304,6 +323,7 @@ Theme Object Structure:
   - [x] Loading indicators
 
 ### Phase 6: Advanced Features & Polish ✨
+
 - [ ] Theme switching system
   - [ ] Theme selector UI
   - [ ] 5 complete themes
@@ -322,6 +342,7 @@ Theme Object Structure:
 - [ ] Comprehensive testing
 
 ### Phase 7: Documentation & Delivery 📚
+
 - [ ] Code documentation
 - [ ] API documentation
 - [ ] Screen recording preparation
@@ -333,19 +354,23 @@ Theme Object Structure:
 ## 🚀 Setup Instructions
 
 ### Frontend Setup
+
 ```bash
 cd frontend
 npm install
 npm start
 ```
+
 Application runs on: `http://localhost:3000`
 
 ### Backend Setup
+
 ```bash
 cd backend
 pip install fastapi uvicorn networkx
 uvicorn main:app --reload
 ```
+
 API runs on: `http://localhost:8000`
 
 ---
@@ -416,12 +441,14 @@ Warning:            #F59E0B
 ```
 
 ### Typography
+
 - **Font Family**: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto'
 - **Heading**: 24px, 600 weight
 - **Body**: 14px, 400 weight
 - **Small**: 12px, 400 weight
 
 ### Spacing Scale
+
 ```
 xs:  4px
 sm:  8px
@@ -432,6 +459,7 @@ xl:  32px
 ```
 
 ### Node Design Specifications
+
 ```css
 Width:          240px (dynamic for text nodes)
 Height:         Auto-adjusting
@@ -447,6 +475,7 @@ Background:     Linear gradient from #312E81 to #1E1B4B
 ## ✨ Features
 
 ### Core Features
+
 - ✅ Drag-and-drop node placement
 - ✅ Node connections with animated edges
 - ✅ Minimap for navigation
@@ -454,6 +483,7 @@ Background:     Linear gradient from #312E81 to #1E1B4B
 - ✅ Grid snapping
 
 ### Advanced Features (Planned)
+
 - 🔄 Theme switching (5 themes)
 - 🔄 Dynamic node resizing
 - 🔄 Variable detection and parsing
@@ -468,27 +498,35 @@ Background:     Linear gradient from #312E81 to #1E1B4B
 ## 🎓 Assessment Compliance
 
 ### Part 1: Node Abstraction ✅
+
 **Implementation:** Factory pattern with config-based node generation
+
 - BaseNode component with customizable slots
 - Node factory for rapid node creation
 - 5+ new node types demonstrating flexibility
 
 ### Part 2: Styling ✅
+
 **Implementation:** Professional VectorShift-inspired design
+
 - Complete design system
 - Theme provider architecture
 - Smooth animations and transitions
 - Responsive and polished UI
 
 ### Part 3: Text Node Logic ✅
+
 **Implementation:** Dynamic resizing + variable parsing
+
 - Auto-adjusting dimensions based on content
 - Regex-based variable detection (`{{ varName }}`)
 - Dynamic handle generation and positioning
 - Real-time updates
 
 ### Part 4: Backend Integration ✅
+
 **Implementation:** Full-stack pipeline validation
+
 - Frontend serialization and API calls
 - Backend DAG detection using NetworkX
 - Professional alert system with results
@@ -499,6 +537,7 @@ Background:     Linear gradient from #312E81 to #1E1B4B
 ## 📈 Success Metrics
 
 This project demonstrates:
+
 - **Architecture:** Clean, modular, scalable code structure
 - **Engineering:** Production-ready patterns and practices
 - **Design:** Pixel-perfect, professional UI/UX
@@ -511,6 +550,7 @@ This project demonstrates:
 ## 👨‍💻 Development Approach
 
 ### Principles
+
 1. **README-Driven Development**: Plan documented, progress tracked
 2. **Incremental Implementation**: Build and verify step-by-step
 3. **Quality Over Speed**: Production-grade code from the start
@@ -518,6 +558,7 @@ This project demonstrates:
 5. **Future-Proof**: Extensible, maintainable architecture
 
 ### Code Standards
+
 - Consistent naming conventions
 - Comprehensive comments
 - Modular, reusable components
@@ -540,6 +581,6 @@ This project demonstrates:
 
 **Built with ❤️ for VectorShift**
 
-*Demonstrating production-level engineering and design excellence*
+_Demonstrating production-level engineering and design excellence_
 
 </div>
